@@ -59,7 +59,8 @@ mkdir build
 cd build
 cmake ..
 make
-./sensor_sim```
+./sensor_sim
+```
 
 🎯 Milestones
 See TODO.md for the current development roadmap, including core features and cybersecurity goals.
