@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/sensor_sim.dir/src/main.cpp.o -o sensor_sim  src/broker/libbroker.a 

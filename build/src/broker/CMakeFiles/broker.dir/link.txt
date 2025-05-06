@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbroker.a CMakeFiles/broker.dir/Broker.cpp.o
+/usr/bin/ranlib libbroker.a
