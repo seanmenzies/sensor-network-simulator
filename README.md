@@ -62,11 +62,11 @@ make
 ./sensor_sim
 ```
 
-🎯 Milestones
+## 🎯 Milestones
 See TODO.md for the current development roadmap, including core features and cybersecurity goals.
 
-🤝 Contributions
-This is a learning-focused collaboration. If you're working on a module (e.g., security, frontend), open a branch or PR, or coordinate via issues.
+## 🤝 Contributions
+Guaps and Rezman locking this town down.
 
-📜 License
+## 📜 License
 This project is open for educational use and experimentation. License to be decided.
