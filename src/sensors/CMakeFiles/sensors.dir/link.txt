@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsensors.a CMakeFiles/sensors.dir/MotionSensor.cpp.o CMakeFiles/sensors.dir/SensorNodeBase.cpp.o CMakeFiles/sensors.dir/SoundSensor.cpp.o CMakeFiles/sensors.dir/TemperatureSensor.cpp.o
+/usr/bin/ranlib libsensors.a

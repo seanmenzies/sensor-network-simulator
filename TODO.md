@@ -7,12 +7,12 @@
 - [x] Broker module stub implemented
 
 ## 🚧 Milestone 2: Sensor Node Module
-- [ ] Create virtual sensor classes (e.g., TemperatureSensor)
-- [ ] Simulate periodic data generation
-- [ ] Use Boost.Asio to send data to broker
+- [x] Create virtual sensor classes (Temperature, Sound, Motion)
+- [x] Simulate periodic data generation
+- [x] Use Boost.Asio to send data to broker
 
 ## 🚧 Milestone 3: Message Broker Expansion
-- [ ] Accept sensor connections
+- [x] Accept sensor connections
 - [ ] Route messages to consumers
 - [ ] Log incoming data
 
