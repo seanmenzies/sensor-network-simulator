@@ -1,68 +1,78 @@
-# Sensor Network Simulator – Milestones
+# ✅ Sensor Network Simulator - Smart Building System
 
-## ✅ Milestone 1: Project Scaffolding
-- [x] Git repository initialized
-- [x] Project folder structure created
-- [x] CMake build system working
-- [x] Broker module stub implemented
+## ✅ Milestone 1: Project Structure
+- [x] Set up CMake-based project with modular directories
+- [x] Create broker, sensor, and common modules
+- [x] Add Boost and shared utilities (e.g. NetworkUtils)
+- [x] Create SensorNodeBase and generate sensor UUIDs
+- [x] Add basic sensors: temperature, motion, sound
 
-## 🚧 Milestone 2: Sensor Node Module
-- [x] Create virtual sensor classes (Temperature, Sound, Motion)
-- [x] Simulate periodic data generation
-- [x] Use Boost.Asio to send data to broker
+---
 
-## 🚧 Milestone 3: Message Broker Expansion
+## ✅ Milestone 2: Sensor Communication
+- [x] Implement `sendDataToBroker()` TCP client in sensors
+- [x] Create basic `BrokerServer` to accept connections
+- [x] Use Boost.Asio async accept + async read
+- [x] Serialize sensor data as JSON-style string
+
+---
+
+## ✅ Milestone 3: Message Handling
 - [x] Accept sensor connections
 - [ ] Route messages to consumers
-- [ ] Log incoming data
+- [ ] Log incoming data with timestamp
+- [ ] Parse JSON and extract sensor metadata
+- [ ] Include sensor type and value in broker log
+- [ ] Sanitize inputs before accepting payload *  ← (input validation)
+- [ ] Check client source IP or certificate (when secure mode enabled) *  ← (origin validation)
 
-## 🚧 Milestone 4: Security Layer
-- [ ] Add TLS/SSL encryption with OpenSSL
-- [ ] Implement simple token authentication
-- [ ] Detect and log spoof/replay attacks
+---
 
-## 🚧 Milestone 5: Frontend Interface (Optional)
-- [ ] Qt dashboard to view live sensor updates
-- [ ] Controls to start/stop simulation
+## 🔜 Milestone 4: Smart Building Features (Core Logic)
+- [ ] Add CO₂ and humidity sensors
+- [ ] Simulate HVAC control logic based on thresholds
+- [ ] Store room-level sensor states in broker memory
+- [ ] Track occupancy based on motion sensors
+- [ ] Trigger auto-disable HVAC if window sensors report open
+- [ ] Log sensor uptime and dropouts *
+- [ ] Authenticate sensor clients using token or public key *  ← (authentication)
+- [ ] Hash/log sensor ID with message to detect spoofing *
+- [ ] Add anomaly detection logic (e.g. temp too high when HVAC is active)
 
-## 🚧 Milestone 6: Final Polish
-- [ ] Add unit tests
-- [ ] Add build scripts
-- [ ] Write user documentation# Sensor Network Simulator – Milestones
+---
 
-## ✅ Milestone 1: Project Scaffolding
-- [x] Git repository initialized
-- [x] Project folder structure created
-- [x] CMake build system working
-- [x] Broker module stub implemented
-- [x] Version control connected to GitHub
+## 🔜 Milestone 5: Consumer Architecture
+- [ ] Define `IMessageConsumer` interface
+- [ ] Implement `LoggerConsumer` (file log)
+- [ ] Implement `AlertConsumer` (e.g. stdout warning if threshold exceeded)
+- [ ] Add `SecurityConsumer` to detect conflicting sensor behavior *
+- [ ] Route incoming data to all consumers via observer pattern
+- [ ] Record last-seen timestamp per sensor and flag stale sources *
 
-## 🚧 Milestone 2: Sensor Node Module
-- [ ] Create virtual sensor classes (e.g., TemperatureSensor)
-- [ ] Simulate periodic data generation
-- [ ] Send sensor data via Boost.Asio to the broker
-- [ ] Implement multithreaded simulation
+---
 
-## 🚧 Milestone 3: Message Broker Expansion
-- [ ] Accept and manage sensor connections
-- [ ] Parse and log incoming data
-- [ ] Route data to the anomaly detector module
+## 🔜 Milestone 6: Configuration & Resilience
+- [ ] Create `Configuration` class to define system-wide settings (e.g. broker host/port, unit system)
+- [ ] Enable per-sensor config overrides (e.g. calibration values)
+- [ ] Add environment-specific settings loader (e.g. prod vs test)
+- [ ] Add secure mode toggle to enforce stricter policies *
+- [ ] Retry connections on failure with exponential backoff
+- [ ] Prevent malformed data from crashing broker *
 
-## 🚧 Milestone 4: Frontend Interface (Optional)
-- [ ] Build a Qt dashboard to show live sensor updates
-- [ ] Display connection status and alerts
-- [ ] Allow start/stop/reset controls from UI
+---
 
-## 🚧 Milestone 5: Cybersecurity Features
-- [ ] Enable TLS encryption for sensor-broker communication (OpenSSL + Boost.Asio)
-- [ ] Implement authentication (token or PSK per sensor)
-- [ ] Add basic intrusion detection: rate limiting, replay detection, spoof protection
-- [ ] Create a "malicious node" for simulated attacks (flooding, replay, etc.)
-- [ ] Log security events separately
-- [ ] Collaborator to generate threat report script from logs
+## 🔜 Milestone 7: UI / Visual Layer
+- [ ] Optional: CLI dashboard with sensor values and alerts
+- [ ] Optional: WebSocket endpoint for live updates
+- [ ] Optional: Historical graphing (temp, CO₂) via CSV export or browser frontend
 
-## 🚧 Milestone 6: Final Polish & Deployment
-- [ ] Add unit tests (sensors, broker, security)
-- [ ] Add `.gitignore`, build scripts, and documentation
-- [ ] Add systemd service files or launch scripts (Linux)
-- [ ] Create project README and contributor guidelines
+---
+
+## 🔐 Cybersecurity-Specific Goals (all items above marked with `*`)
+- Input validation (malformed or malicious payloads)
+- Client authentication (e.g. tokens or certs)
+- Origin verification (IP, hostname, etc.)
+- Message integrity checks (hashing, signatures)
+- Timestamp validation and message freshness
+- Secure mode toggle (e.g. disable unauthenticated sensors)
+- Alert routing based on trust level of sensor

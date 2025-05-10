@@ -1,4 +1,5 @@
 #include "BrokerServer.h"
+#include "../common/NetworkUtils.h"
 #include <iostream>
 
 using boost::asio::ip::tcp;
@@ -24,10 +25,11 @@ void BrokerServer::doAccept() {
             socket->async_read_some(boost::asio::buffer(*buffer), [socket, buffer](boost::system::error_code ec, std::size_t length) {
                 if (!ec) {
                     std::string data(buffer->data(), length);
+                    std::string now = getCurrentTimestamp();
                     std::cout << "Received: " << data << std::endl;
                 }
             });
         }
-        doAccept();  // keep accepting
+        doAccept();
     });
 }

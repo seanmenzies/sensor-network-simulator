@@ -18,4 +18,5 @@ protected:
 
 private:
     std::string generateSensorID();
+    void sendToBroker(const std::string& host, short port, const std::string& message);
 };
