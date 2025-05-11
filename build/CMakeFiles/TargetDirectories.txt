@@ -4,8 +4,13 @@
 /home/sean/sensor-network-simulator/build/src/broker/CMakeFiles/broker.dir
 /home/sean/sensor-network-simulator/build/src/broker/CMakeFiles/edit_cache.dir
 /home/sean/sensor-network-simulator/build/src/broker/CMakeFiles/rebuild_cache.dir
+/home/sean/sensor-network-simulator/build/src/consumers/CMakeFiles/consumers.dir
+/home/sean/sensor-network-simulator/build/src/consumers/CMakeFiles/edit_cache.dir
+/home/sean/sensor-network-simulator/build/src/consumers/CMakeFiles/rebuild_cache.dir
+/home/sean/sensor-network-simulator/build/src/sensors/CMakeFiles/sensors.dir
 /home/sean/sensor-network-simulator/build/src/sensors/CMakeFiles/edit_cache.dir
 /home/sean/sensor-network-simulator/build/src/sensors/CMakeFiles/rebuild_cache.dir
+/home/sean/sensor-network-simulator/build/src/common/CMakeFiles/common.dir
 /home/sean/sensor-network-simulator/build/src/common/CMakeFiles/edit_cache.dir
 /home/sean/sensor-network-simulator/build/src/common/CMakeFiles/rebuild_cache.dir
 /home/sean/sensor-network-simulator/build/src/security/CMakeFiles/edit_cache.dir

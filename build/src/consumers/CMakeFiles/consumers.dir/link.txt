@@ -1,0 +1,2 @@
+/usr/bin/ar qc libconsumers.a CMakeFiles/consumers.dir/AlertConsumer.cpp.o CMakeFiles/consumers.dir/LoggerConsumer.cpp.o CMakeFiles/consumers.dir/MessageBus.cpp.o CMakeFiles/consumers.dir/SensorMessage.cpp.o
+/usr/bin/ranlib libconsumers.a

@@ -116,6 +116,44 @@ depend:
 	cd /home/sean/sensor-network-simulator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/common/CMakeFiles/common.dir/rule:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/common/CMakeFiles/common.dir/rule
+.PHONY : src/common/CMakeFiles/common.dir/rule
+
+# Convenience name for target.
+common: src/common/CMakeFiles/common.dir/rule
+.PHONY : common
+
+# fast build rule for target.
+common/fast:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/build
+.PHONY : common/fast
+
+NetworkUtils.o: NetworkUtils.cpp.o
+.PHONY : NetworkUtils.o
+
+# target to build an object file
+NetworkUtils.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/NetworkUtils.cpp.o
+.PHONY : NetworkUtils.cpp.o
+
+NetworkUtils.i: NetworkUtils.cpp.i
+.PHONY : NetworkUtils.i
+
+# target to preprocess a source file
+NetworkUtils.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/NetworkUtils.cpp.i
+.PHONY : NetworkUtils.cpp.i
+
+NetworkUtils.s: NetworkUtils.cpp.s
+.PHONY : NetworkUtils.s
+
+# target to generate assembly for a file
+NetworkUtils.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/NetworkUtils.cpp.s
+.PHONY : NetworkUtils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... common"
+	@echo "... NetworkUtils.o"
+	@echo "... NetworkUtils.i"
+	@echo "... NetworkUtils.s"
 .PHONY : help
 
 

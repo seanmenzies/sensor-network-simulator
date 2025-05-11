@@ -22,14 +22,25 @@ void BrokerServer::doAccept() {
             // create a 1kb buffer to store incoming data
             auto buffer = std::make_shared<std::vector<char>>(1024);
             // reads as much data as is currently available
-            socket->async_read_some(boost::asio::buffer(*buffer), [socket, buffer](boost::system::error_code ec, std::size_t length) {
+            socket->async_read_some(boost::asio::buffer(*buffer), [socket, buffer, this](boost::system::error_code ec, std::size_t length) {
                 if (!ec) {
                     std::string data(buffer->data(), length);
                     std::string now = getCurrentTimestamp();
                     std::cout << "Received: " << data << std::endl;
+                    routeMessageToConsumers(data);
                 }
             });
         }
         doAccept();
     });
+}
+
+void BrokerServer::registerConsumer(std::shared_ptr<IMessageConsumer> consumer) {
+    consumers.push_back(consumer);
+}
+
+void BrokerServer::routeMessageToConsumers(const std::string& message) {
+    for (const auto& c : consumers) {
+        c->handleMessage(message);
+    }
 }

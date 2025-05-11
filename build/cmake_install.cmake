@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/sean/sensor-network-simulator/build/src/broker/cmake_install.cmake")
+  include("/home/sean/sensor-network-simulator/build/src/consumers/cmake_install.cmake")
   include("/home/sean/sensor-network-simulator/build/src/sensors/cmake_install.cmake")
   include("/home/sean/sensor-network-simulator/build/src/common/cmake_install.cmake")
   include("/home/sean/sensor-network-simulator/build/src/security/cmake_install.cmake")

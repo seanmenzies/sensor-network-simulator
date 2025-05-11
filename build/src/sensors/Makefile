@@ -116,6 +116,164 @@ depend:
 	cd /home/sean/sensor-network-simulator/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+src/sensors/CMakeFiles/sensors.dir/rule:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/sensors/CMakeFiles/sensors.dir/rule
+.PHONY : src/sensors/CMakeFiles/sensors.dir/rule
+
+# Convenience name for target.
+sensors: src/sensors/CMakeFiles/sensors.dir/rule
+.PHONY : sensors
+
+# fast build rule for target.
+sensors/fast:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/build
+.PHONY : sensors/fast
+
+MotionSensor.o: MotionSensor.cpp.o
+.PHONY : MotionSensor.o
+
+# target to build an object file
+MotionSensor.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/MotionSensor.cpp.o
+.PHONY : MotionSensor.cpp.o
+
+MotionSensor.i: MotionSensor.cpp.i
+.PHONY : MotionSensor.i
+
+# target to preprocess a source file
+MotionSensor.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/MotionSensor.cpp.i
+.PHONY : MotionSensor.cpp.i
+
+MotionSensor.s: MotionSensor.cpp.s
+.PHONY : MotionSensor.s
+
+# target to generate assembly for a file
+MotionSensor.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/MotionSensor.cpp.s
+.PHONY : MotionSensor.cpp.s
+
+SensorNodeBase.o: SensorNodeBase.cpp.o
+.PHONY : SensorNodeBase.o
+
+# target to build an object file
+SensorNodeBase.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorNodeBase.cpp.o
+.PHONY : SensorNodeBase.cpp.o
+
+SensorNodeBase.i: SensorNodeBase.cpp.i
+.PHONY : SensorNodeBase.i
+
+# target to preprocess a source file
+SensorNodeBase.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorNodeBase.cpp.i
+.PHONY : SensorNodeBase.cpp.i
+
+SensorNodeBase.s: SensorNodeBase.cpp.s
+.PHONY : SensorNodeBase.s
+
+# target to generate assembly for a file
+SensorNodeBase.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorNodeBase.cpp.s
+.PHONY : SensorNodeBase.cpp.s
+
+SensorRegistryLoader.o: SensorRegistryLoader.cpp.o
+.PHONY : SensorRegistryLoader.o
+
+# target to build an object file
+SensorRegistryLoader.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorRegistryLoader.cpp.o
+.PHONY : SensorRegistryLoader.cpp.o
+
+SensorRegistryLoader.i: SensorRegistryLoader.cpp.i
+.PHONY : SensorRegistryLoader.i
+
+# target to preprocess a source file
+SensorRegistryLoader.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorRegistryLoader.cpp.i
+.PHONY : SensorRegistryLoader.cpp.i
+
+SensorRegistryLoader.s: SensorRegistryLoader.cpp.s
+.PHONY : SensorRegistryLoader.s
+
+# target to generate assembly for a file
+SensorRegistryLoader.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorRegistryLoader.cpp.s
+.PHONY : SensorRegistryLoader.cpp.s
+
+SensorType.o: SensorType.cpp.o
+.PHONY : SensorType.o
+
+# target to build an object file
+SensorType.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorType.cpp.o
+.PHONY : SensorType.cpp.o
+
+SensorType.i: SensorType.cpp.i
+.PHONY : SensorType.i
+
+# target to preprocess a source file
+SensorType.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorType.cpp.i
+.PHONY : SensorType.cpp.i
+
+SensorType.s: SensorType.cpp.s
+.PHONY : SensorType.s
+
+# target to generate assembly for a file
+SensorType.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SensorType.cpp.s
+.PHONY : SensorType.cpp.s
+
+SoundSensor.o: SoundSensor.cpp.o
+.PHONY : SoundSensor.o
+
+# target to build an object file
+SoundSensor.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SoundSensor.cpp.o
+.PHONY : SoundSensor.cpp.o
+
+SoundSensor.i: SoundSensor.cpp.i
+.PHONY : SoundSensor.i
+
+# target to preprocess a source file
+SoundSensor.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SoundSensor.cpp.i
+.PHONY : SoundSensor.cpp.i
+
+SoundSensor.s: SoundSensor.cpp.s
+.PHONY : SoundSensor.s
+
+# target to generate assembly for a file
+SoundSensor.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/SoundSensor.cpp.s
+.PHONY : SoundSensor.cpp.s
+
+TemperatureSensor.o: TemperatureSensor.cpp.o
+.PHONY : TemperatureSensor.o
+
+# target to build an object file
+TemperatureSensor.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/TemperatureSensor.cpp.o
+.PHONY : TemperatureSensor.cpp.o
+
+TemperatureSensor.i: TemperatureSensor.cpp.i
+.PHONY : TemperatureSensor.i
+
+# target to preprocess a source file
+TemperatureSensor.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/TemperatureSensor.cpp.i
+.PHONY : TemperatureSensor.cpp.i
+
+TemperatureSensor.s: TemperatureSensor.cpp.s
+.PHONY : TemperatureSensor.s
+
+# target to generate assembly for a file
+TemperatureSensor.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/TemperatureSensor.cpp.s
+.PHONY : TemperatureSensor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -124,6 +282,25 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... sensors"
+	@echo "... MotionSensor.o"
+	@echo "... MotionSensor.i"
+	@echo "... MotionSensor.s"
+	@echo "... SensorNodeBase.o"
+	@echo "... SensorNodeBase.i"
+	@echo "... SensorNodeBase.s"
+	@echo "... SensorRegistryLoader.o"
+	@echo "... SensorRegistryLoader.i"
+	@echo "... SensorRegistryLoader.s"
+	@echo "... SensorType.o"
+	@echo "... SensorType.i"
+	@echo "... SensorType.s"
+	@echo "... SoundSensor.o"
+	@echo "... SoundSensor.i"
+	@echo "... SoundSensor.s"
+	@echo "... TemperatureSensor.o"
+	@echo "... TemperatureSensor.i"
+	@echo "... TemperatureSensor.s"
 .PHONY : help
 
 

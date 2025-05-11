@@ -142,6 +142,45 @@ broker/fast:
 	$(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/build
 .PHONY : broker/fast
 
+#=============================================================================
+# Target rules for targets named consumers
+
+# Build rule for target.
+consumers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consumers
+.PHONY : consumers
+
+# fast build rule for target.
+consumers/fast:
+	$(MAKE) $(MAKESILENT) -f src/consumers/CMakeFiles/consumers.dir/build.make src/consumers/CMakeFiles/consumers.dir/build
+.PHONY : consumers/fast
+
+#=============================================================================
+# Target rules for targets named sensors
+
+# Build rule for target.
+sensors: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sensors
+.PHONY : sensors
+
+# fast build rule for target.
+sensors/fast:
+	$(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/build
+.PHONY : sensors/fast
+
+#=============================================================================
+# Target rules for targets named common
+
+# Build rule for target.
+common: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common
+.PHONY : common
+
+# fast build rule for target.
+common/fast:
+	$(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/build
+.PHONY : common/fast
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -175,7 +214,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... broker"
+	@echo "... common"
+	@echo "... consumers"
 	@echo "... sensor_sim"
+	@echo "... sensors"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

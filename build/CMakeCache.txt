@@ -14,6 +14,14 @@
 # EXTERNAL cache entries
 ########################
 
+//The directory containing a CMake configuration file for Boost.
+Boost_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0
+
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=/usr/include
+
+Boost_SYSTEM_LIBRARY_RELEASE:STRING=/usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -234,11 +242,31 @@ SensorNetworkSimulator_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 SensorNetworkSimulator_SOURCE_DIR:STATIC=/home/sean/sensor-network-simulator
 
+//The directory containing a CMake configuration file for boost_headers.
+boost_headers_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_headers-1.83.0
+
+//The directory containing a CMake configuration file for boost_system.
+boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0
+
+//Dependencies for the target
+broker_LIB_DEPENDS:STATIC=general;Boost::system;
+
+//Dependencies for the target
+common_LIB_DEPENDS:STATIC=general;Boost::system;
+
+//The directory containing a CMake configuration file for nlohmann_json.
+nlohmann_json_DIR:PATH=/usr/share/cmake/nlohmann_json
+
+//Dependencies for the target
+sensors_LIB_DEPENDS:STATIC=general;Boost::system;general;common;
+
 
 ########################
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
@@ -339,7 +367,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -384,6 +412,14 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake][cfound components: system ][v1.83.0()]
+//Details about finding nlohmann_json
+FIND_PACKAGE_MESSAGE_DETAILS_nlohmann_json:INTERNAL=[/usr/share/cmake/nlohmann_json/nlohmann_jsonConfig.cmake][v3.11.3()]
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+//ADVANCED property for variable: boost_headers_DIR
+boost_headers_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: boost_system_DIR
+boost_system_DIR-ADVANCED:INTERNAL=1
 

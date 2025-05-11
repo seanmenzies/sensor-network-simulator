@@ -77,7 +77,11 @@
 			"shared_mutex": "cpp",
 			"stop_token": "cpp",
 			"thread": "cpp",
-			"typeindex": "cpp"
+			"typeindex": "cpp",
+			"forward_list": "cpp",
+			"fstream": "cpp",
+			"ranges": "cpp",
+			"valarray": "cpp"
 		}
 	}
 }

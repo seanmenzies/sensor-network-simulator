@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/broker.dir/Broker.cpp.o"
-  "CMakeFiles/broker.dir/Broker.cpp.o.d"
+  "CMakeFiles/broker.dir/BrokerServer.cpp.o"
+  "CMakeFiles/broker.dir/BrokerServer.cpp.o.d"
   "libbroker.a"
   "libbroker.pdb"
 )

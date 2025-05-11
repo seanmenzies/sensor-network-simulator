@@ -19,8 +19,8 @@
 
 ## ✅ Milestone 3: Message Handling
 - [x] Accept sensor connections
-- [ ] Route messages to consumers
-- [ ] Log incoming data with timestamp
+- [x] Route messages to consumers 
+- [x] Log incoming data with timestamp
 - [ ] Parse JSON and extract sensor metadata
 - [ ] Include sensor type and value in broker log
 - [ ] Sanitize inputs before accepting payload *  ← (input validation)

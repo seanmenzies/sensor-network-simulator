@@ -69,28 +69,28 @@ include src/broker/CMakeFiles/broker.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/broker/CMakeFiles/broker.dir/flags.make
 
-src/broker/CMakeFiles/broker.dir/Broker.cpp.o: src/broker/CMakeFiles/broker.dir/flags.make
-src/broker/CMakeFiles/broker.dir/Broker.cpp.o: /home/sean/sensor-network-simulator/src/broker/Broker.cpp
-src/broker/CMakeFiles/broker.dir/Broker.cpp.o: src/broker/CMakeFiles/broker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/broker/CMakeFiles/broker.dir/Broker.cpp.o"
-	cd /home/sean/sensor-network-simulator/build/src/broker && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/broker/CMakeFiles/broker.dir/Broker.cpp.o -MF CMakeFiles/broker.dir/Broker.cpp.o.d -o CMakeFiles/broker.dir/Broker.cpp.o -c /home/sean/sensor-network-simulator/src/broker/Broker.cpp
+src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o: src/broker/CMakeFiles/broker.dir/flags.make
+src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o: /home/sean/sensor-network-simulator/src/broker/BrokerServer.cpp
+src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o: src/broker/CMakeFiles/broker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o"
+	cd /home/sean/sensor-network-simulator/build/src/broker && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o -MF CMakeFiles/broker.dir/BrokerServer.cpp.o.d -o CMakeFiles/broker.dir/BrokerServer.cpp.o -c /home/sean/sensor-network-simulator/src/broker/BrokerServer.cpp
 
-src/broker/CMakeFiles/broker.dir/Broker.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/broker.dir/Broker.cpp.i"
-	cd /home/sean/sensor-network-simulator/build/src/broker && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sean/sensor-network-simulator/src/broker/Broker.cpp > CMakeFiles/broker.dir/Broker.cpp.i
+src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/broker.dir/BrokerServer.cpp.i"
+	cd /home/sean/sensor-network-simulator/build/src/broker && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sean/sensor-network-simulator/src/broker/BrokerServer.cpp > CMakeFiles/broker.dir/BrokerServer.cpp.i
 
-src/broker/CMakeFiles/broker.dir/Broker.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/broker.dir/Broker.cpp.s"
-	cd /home/sean/sensor-network-simulator/build/src/broker && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sean/sensor-network-simulator/src/broker/Broker.cpp -o CMakeFiles/broker.dir/Broker.cpp.s
+src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/broker.dir/BrokerServer.cpp.s"
+	cd /home/sean/sensor-network-simulator/build/src/broker && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sean/sensor-network-simulator/src/broker/BrokerServer.cpp -o CMakeFiles/broker.dir/BrokerServer.cpp.s
 
 # Object files for target broker
 broker_OBJECTS = \
-"CMakeFiles/broker.dir/Broker.cpp.o"
+"CMakeFiles/broker.dir/BrokerServer.cpp.o"
 
 # External object files for target broker
 broker_EXTERNAL_OBJECTS =
 
-src/broker/libbroker.a: src/broker/CMakeFiles/broker.dir/Broker.cpp.o
+src/broker/libbroker.a: src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o
 src/broker/libbroker.a: src/broker/CMakeFiles/broker.dir/build.make
 src/broker/libbroker.a: src/broker/CMakeFiles/broker.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libbroker.a"

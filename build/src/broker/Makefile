@@ -130,29 +130,29 @@ broker/fast:
 	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/build
 .PHONY : broker/fast
 
-Broker.o: Broker.cpp.o
-.PHONY : Broker.o
+BrokerServer.o: BrokerServer.cpp.o
+.PHONY : BrokerServer.o
 
 # target to build an object file
-Broker.cpp.o:
-	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/Broker.cpp.o
-.PHONY : Broker.cpp.o
+BrokerServer.cpp.o:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o
+.PHONY : BrokerServer.cpp.o
 
-Broker.i: Broker.cpp.i
-.PHONY : Broker.i
+BrokerServer.i: BrokerServer.cpp.i
+.PHONY : BrokerServer.i
 
 # target to preprocess a source file
-Broker.cpp.i:
-	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/Broker.cpp.i
-.PHONY : Broker.cpp.i
+BrokerServer.cpp.i:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.i
+.PHONY : BrokerServer.cpp.i
 
-Broker.s: Broker.cpp.s
-.PHONY : Broker.s
+BrokerServer.s: BrokerServer.cpp.s
+.PHONY : BrokerServer.s
 
 # target to generate assembly for a file
-Broker.cpp.s:
-	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/Broker.cpp.s
-.PHONY : Broker.cpp.s
+BrokerServer.cpp.s:
+	cd /home/sean/sensor-network-simulator/build && $(MAKE) $(MAKESILENT) -f src/broker/CMakeFiles/broker.dir/build.make src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.s
+.PHONY : BrokerServer.cpp.s
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... broker"
-	@echo "... Broker.o"
-	@echo "... Broker.i"
-	@echo "... Broker.s"
+	@echo "... BrokerServer.o"
+	@echo "... BrokerServer.i"
+	@echo "... BrokerServer.s"
 .PHONY : help
 
 

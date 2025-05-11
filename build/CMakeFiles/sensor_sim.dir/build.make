@@ -93,6 +93,8 @@ sensor_sim_EXTERNAL_OBJECTS =
 sensor_sim: CMakeFiles/sensor_sim.dir/src/main.cpp.o
 sensor_sim: CMakeFiles/sensor_sim.dir/build.make
 sensor_sim: src/broker/libbroker.a
+sensor_sim: src/consumers/libconsumers.a
+sensor_sim: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
 sensor_sim: CMakeFiles/sensor_sim.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable sensor_sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sensor_sim.dir/link.txt --verbose=$(VERBOSE)

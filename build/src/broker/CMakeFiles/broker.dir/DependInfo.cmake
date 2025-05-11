@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sean/sensor-network-simulator/src/broker/Broker.cpp" "src/broker/CMakeFiles/broker.dir/Broker.cpp.o" "gcc" "src/broker/CMakeFiles/broker.dir/Broker.cpp.o.d"
+  "/home/sean/sensor-network-simulator/src/broker/BrokerServer.cpp" "src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o" "gcc" "src/broker/CMakeFiles/broker.dir/BrokerServer.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

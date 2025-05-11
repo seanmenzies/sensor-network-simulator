@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 enum class TemperatureUnit {
     Celsius,
@@ -11,7 +12,12 @@ public:
     static void setTemperatureUnit(TemperatureUnit unit);
     static TemperatureUnit getTemperatureUnit() {return temperatureUnit;};
     static float convertToTempUnit(float CelsiusTemp);
+    static std::string convertToTempUnit(std::string s_CelsiusTemp);
+
+    static short getDecimalPlaces() {return decimalPlaces;};
+    static void setDecimalPlaces(short newPlaces) {decimalPlaces = newPlaces;};
 
 private:
     static TemperatureUnit temperatureUnit;
+    static short decimalPlaces;
 };

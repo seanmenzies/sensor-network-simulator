@@ -5,12 +5,29 @@
 #include "../common/NetworkUtils.h"
 #include <sstream>
 #include <iostream>
+#include <nlohmann/json.hpp>
 #include "SensorNodeBase.h"
+
+using json = nlohmann::json;
 
 SensorNodeBase::SensorNodeBase() 
     // use initializer list to assign value to const var
     : sensor_id(generateSensorID()) {
     
+}
+
+std::string SensorNodeBase::generateData() const
+{
+    json payload;
+
+    payload["sensor_id"] = sensor_id;
+    payload["sensor_type"] = getSensorType();
+    payload["timestamp"] = getCurrentTimestamp();
+
+    // include subclass-specific data
+    payload["data"] = json::parse(getSensorReadingJSON());
+
+    return payload.dump();
 }
 
 std::string SensorNodeBase::generateSensorID() 
