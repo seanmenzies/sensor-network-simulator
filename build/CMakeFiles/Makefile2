@@ -68,6 +68,7 @@ all: src/broker/all
 all: src/consumers/all
 all: src/sensors/all
 all: src/common/all
+all: src/config/all
 all: src/security/all
 all: tests/all
 .PHONY : all
@@ -77,6 +78,7 @@ preinstall: src/broker/preinstall
 preinstall: src/consumers/preinstall
 preinstall: src/sensors/preinstall
 preinstall: src/common/preinstall
+preinstall: src/config/preinstall
 preinstall: src/security/preinstall
 preinstall: tests/preinstall
 .PHONY : preinstall
@@ -87,6 +89,7 @@ clean: src/broker/clean
 clean: src/consumers/clean
 clean: src/sensors/clean
 clean: src/common/clean
+clean: src/config/clean
 clean: src/security/clean
 clean: tests/clean
 .PHONY : clean
@@ -120,6 +123,21 @@ src/common/preinstall:
 # Recursive "clean" directory target.
 src/common/clean: src/common/CMakeFiles/common.dir/clean
 .PHONY : src/common/clean
+
+#=============================================================================
+# Directory level rules for directory src/config
+
+# Recursive "all" directory target.
+src/config/all: src/config/CMakeFiles/config.dir/all
+.PHONY : src/config/all
+
+# Recursive "preinstall" directory target.
+src/config/preinstall:
+.PHONY : src/config/preinstall
+
+# Recursive "clean" directory target.
+src/config/clean: src/config/CMakeFiles/config.dir/clean
+.PHONY : src/config/clean
 
 #=============================================================================
 # Directory level rules for directory src/consumers
@@ -187,14 +205,17 @@ tests/clean:
 # All Build rule for target.
 CMakeFiles/sensor_sim.dir/all: src/broker/CMakeFiles/broker.dir/all
 CMakeFiles/sensor_sim.dir/all: src/consumers/CMakeFiles/consumers.dir/all
+CMakeFiles/sensor_sim.dir/all: src/sensors/CMakeFiles/sensors.dir/all
+CMakeFiles/sensor_sim.dir/all: src/common/CMakeFiles/common.dir/all
+CMakeFiles/sensor_sim.dir/all: src/config/CMakeFiles/config.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_sim.dir/build.make CMakeFiles/sensor_sim.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sensor_sim.dir/build.make CMakeFiles/sensor_sim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=10,11 "Built target sensor_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=12,13 "Built target sensor_sim"
 .PHONY : CMakeFiles/sensor_sim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sensor_sim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sensor_sim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 0
 .PHONY : CMakeFiles/sensor_sim.dir/rule
@@ -238,15 +259,15 @@ src/broker/CMakeFiles/broker.dir/clean:
 # Target rules for target src/consumers/CMakeFiles/consumers.dir
 
 # All Build rule for target.
-src/consumers/CMakeFiles/consumers.dir/all:
+src/consumers/CMakeFiles/consumers.dir/all: src/config/CMakeFiles/config.dir/all
 	$(MAKE) $(MAKESILENT) -f src/consumers/CMakeFiles/consumers.dir/build.make src/consumers/CMakeFiles/consumers.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/consumers/CMakeFiles/consumers.dir/build.make src/consumers/CMakeFiles/consumers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=5,6,7,8,9 "Built target consumers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=7,8,9,10,11 "Built target consumers"
 .PHONY : src/consumers/CMakeFiles/consumers.dir/all
 
 # Build rule for subdir invocation for target.
 src/consumers/CMakeFiles/consumers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/consumers/CMakeFiles/consumers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 0
 .PHONY : src/consumers/CMakeFiles/consumers.dir/rule
@@ -267,7 +288,7 @@ src/consumers/CMakeFiles/consumers.dir/clean:
 src/sensors/CMakeFiles/sensors.dir/all: src/common/CMakeFiles/common.dir/all
 	$(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/sensors/CMakeFiles/sensors.dir/build.make src/sensors/CMakeFiles/sensors.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=12,13,14,15,16,17,18 "Built target sensors"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=14,15,16,17,18,19,20 "Built target sensors"
 .PHONY : src/sensors/CMakeFiles/sensors.dir/all
 
 # Build rule for subdir invocation for target.
@@ -311,6 +332,32 @@ common: src/common/CMakeFiles/common.dir/rule
 src/common/CMakeFiles/common.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/clean
 .PHONY : src/common/CMakeFiles/common.dir/clean
+
+#=============================================================================
+# Target rules for target src/config/CMakeFiles/config.dir
+
+# All Build rule for target.
+src/config/CMakeFiles/config.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/config/CMakeFiles/config.dir/build.make src/config/CMakeFiles/config.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/config/CMakeFiles/config.dir/build.make src/config/CMakeFiles/config.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/sean/sensor-network-simulator/build/CMakeFiles --progress-num=5,6 "Built target config"
+.PHONY : src/config/CMakeFiles/config.dir/all
+
+# Build rule for subdir invocation for target.
+src/config/CMakeFiles/config.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/config/CMakeFiles/config.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sean/sensor-network-simulator/build/CMakeFiles 0
+.PHONY : src/config/CMakeFiles/config.dir/rule
+
+# Convenience name for target.
+config: src/config/CMakeFiles/config.dir/rule
+.PHONY : config
+
+# clean rule for target.
+src/config/CMakeFiles/config.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/config/CMakeFiles/config.dir/build.make src/config/CMakeFiles/config.dir/clean
+.PHONY : src/config/CMakeFiles/config.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

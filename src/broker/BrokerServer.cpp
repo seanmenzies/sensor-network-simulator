@@ -25,7 +25,6 @@ void BrokerServer::doAccept() {
             socket->async_read_some(boost::asio::buffer(*buffer), [socket, buffer, this](boost::system::error_code ec, std::size_t length) {
                 if (!ec) {
                     std::string data(buffer->data(), length);
-                    std::string now = getCurrentTimestamp();
                     std::cout << "Received: " << data << std::endl;
                     routeMessageToConsumers(data);
                 }

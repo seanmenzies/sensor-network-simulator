@@ -13,6 +13,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "/home/sean/sensor-network-simulator/src/broker/CMakeLists.txt"
   "/home/sean/sensor-network-simulator/src/common/CMakeLists.txt"
+  "/home/sean/sensor-network-simulator/src/config/CMakeLists.txt"
   "/home/sean/sensor-network-simulator/src/consumers/CMakeLists.txt"
   "/home/sean/sensor-network-simulator/src/security/CMakeLists.txt"
   "/home/sean/sensor-network-simulator/src/sensors/CMakeLists.txt"
@@ -65,6 +66,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/consumers/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/sensors/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/common/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/config/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/security/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
@@ -76,4 +78,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/consumers/CMakeFiles/consumers.dir/DependInfo.cmake"
   "src/sensors/CMakeFiles/sensors.dir/DependInfo.cmake"
   "src/common/CMakeFiles/common.dir/DependInfo.cmake"
+  "src/config/CMakeFiles/config.dir/DependInfo.cmake"
   )

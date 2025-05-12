@@ -252,7 +252,10 @@ boost_system_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/boost_system-1.83.0
 broker_LIB_DEPENDS:STATIC=general;Boost::system;
 
 //Dependencies for the target
-common_LIB_DEPENDS:STATIC=general;Boost::system;
+common_LIB_DEPENDS:STATIC=general;Boost::system;general;nlohmann_json;
+
+//Dependencies for the target
+consumers_LIB_DEPENDS:STATIC=general;config;
 
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=/usr/share/cmake/nlohmann_json
@@ -367,7 +370,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

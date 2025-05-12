@@ -18,6 +18,6 @@ std::string Configuration::convertToTempUnit(std::string s_CelsiusTemp)
     std::ostringstream ss;
     ss.precision(Configuration::getDecimalPlaces());
     // without std:::fixed, precision uses *total* digits, not just those after the decimal place
-    ss << std::fixed << std::to_string(f_Temp);
+    ss << std::fixed << f_Temp;
     return ss.str();
 }

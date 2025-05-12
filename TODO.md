@@ -21,8 +21,8 @@
 - [x] Accept sensor connections
 - [x] Route messages to consumers 
 - [x] Log incoming data with timestamp
-- [ ] Parse JSON and extract sensor metadata
-- [ ] Include sensor type and value in broker log
+- [x] Parse JSON and extract sensor metadata
+- [x] Include sensor type and value in broker log
 - [ ] Sanitize inputs before accepting payload *  ← (input validation)
 - [ ] Check client source IP or certificate (when secure mode enabled) *  ← (origin validation)
 

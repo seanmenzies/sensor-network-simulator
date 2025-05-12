@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB
 
-CXX_INCLUDES = -I/home/sean/sensor-network-simulator/include -I/home/sean/sensor-network-simulator/src/consumers
+CXX_INCLUDES = -I/home/sean/sensor-network-simulator/include -I/home/sean/sensor-network-simulator/src/consumers -I/home/sean/sensor-network-simulator/src/config -I/home/sean/sensor-network-simulator/src/sensors -I/home/sean/sensor-network-simulator/src/common
 
 CXX_FLAGS = -std=gnu++17
 

@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/sensor_sim.dir/src/main.cpp.o -o sensor_sim  src/broker/libbroker.a src/consumers/libconsumers.a /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 
+/usr/bin/c++ CMakeFiles/sensor_sim.dir/src/main.cpp.o -o sensor_sim  src/broker/libbroker.a src/consumers/libconsumers.a src/sensors/libsensors.a src/config/libconfig.a src/common/libcommon.a /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 -lnlohmann_json /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 

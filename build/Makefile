@@ -181,6 +181,19 @@ common/fast:
 	$(MAKE) $(MAKESILENT) -f src/common/CMakeFiles/common.dir/build.make src/common/CMakeFiles/common.dir/build
 .PHONY : common/fast
 
+#=============================================================================
+# Target rules for targets named config
+
+# Build rule for target.
+config: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 config
+.PHONY : config
+
+# fast build rule for target.
+config/fast:
+	$(MAKE) $(MAKESILENT) -f src/config/CMakeFiles/config.dir/build.make src/config/CMakeFiles/config.dir/build
+.PHONY : config/fast
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -215,6 +228,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... broker"
 	@echo "... common"
+	@echo "... config"
 	@echo "... consumers"
 	@echo "... sensor_sim"
 	@echo "... sensors"

@@ -48,6 +48,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/sean/sensor-network-simulator/build/src/consumers/cmake_install.cmake")
   include("/home/sean/sensor-network-simulator/build/src/sensors/cmake_install.cmake")
   include("/home/sean/sensor-network-simulator/build/src/common/cmake_install.cmake")
+  include("/home/sean/sensor-network-simulator/build/src/config/cmake_install.cmake")
   include("/home/sean/sensor-network-simulator/build/src/security/cmake_install.cmake")
   include("/home/sean/sensor-network-simulator/build/tests/cmake_install.cmake")
 

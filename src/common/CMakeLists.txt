@@ -10,3 +10,4 @@ target_include_directories(common PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 # Step 4: Link Boost.System if common code (e.g. NetworkUtils.cpp) uses Boost.Asio
 find_package(Boost REQUIRED COMPONENTS system)
 target_link_libraries(common PUBLIC Boost::system)
+target_link_libraries(common PUBLIC nlohmann_json)

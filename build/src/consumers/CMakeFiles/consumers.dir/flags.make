@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/sean/sensor-network-simulator/include -I/home/sean/sensor-network-simulator/src/consumers
+CXX_INCLUDES = -I/home/sean/sensor-network-simulator/include -I/home/sean/sensor-network-simulator/src/consumers -I/home/sean/sensor-network-simulator/src/config
 
 CXX_FLAGS = -std=gnu++17
 
