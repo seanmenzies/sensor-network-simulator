@@ -1,4 +1,5 @@
 #pragma once
+#include "../common/NetworkUtils.h"
 #include <boost/asio.hpp>
 #include <boost/uuid/uuid.hpp>
 #include <boost/uuid/uuid_generators.hpp>
@@ -18,15 +19,13 @@ public:
 
     // simulate data and return as string
     virtual nlohmann::json generateData() const;
-    virtual void simulateSensorReading() = 0;
 
     // get sensor ID
     std::string getID() const { return sensor_id; }
 
 protected:
     const std::string sensor_id;
-    virtual std::string getSensorType() const = 0;
-    virtual std::string getSensorReadingJSON() const = 0;
+    virtual ESensorType getSensorType() const = 0;
     const std::string _host;
     const short _port;
     const int _interval;

@@ -3,10 +3,11 @@
 
 class SoundSensor : public SensorNodeBase {
 public:
-    SoundSensor();
+    SoundSensor(std::string id, const std::string& host, short port, int interval)
+    : SensorNodeBase(id, host, port, interval) {};
 
-    std::string generateData() override;
+    nlohmann::json generateData() const override;
 
 private:
-    float simulateDecibelLevel();  // e.g., 30–100 dB
+    float simulateDecibelLevel() const;  // e.g., 30–100 dB
 };

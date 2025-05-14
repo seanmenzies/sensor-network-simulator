@@ -13,6 +13,8 @@ int main() {
     short port = 12345;
 
     auto broker = std::make_unique<BrokerServer>(io_context, port);
+    // one logging consumer handles all sensors by giving each its own thread
+    // and enqueuing log requests as needed
     auto logger = std::make_shared<LoggerConsumer>("broker.log");
     broker->registerConsumer(logger);
 

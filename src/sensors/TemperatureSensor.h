@@ -5,7 +5,9 @@
 
 class TemperatureSensor : public SensorNodeBase {
 public:
-    TemperatureSensor();
+    TemperatureSensor(std::string id, const std::string& host, short port, int interval)
+    : SensorNodeBase(id, host, port, interval) {};
+    
     std::string getCurrentTimestamp() const;
 
     nlohmann::json generateData() const override {

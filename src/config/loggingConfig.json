@@ -1,0 +1,13 @@
+[
+    {
+        "log_path": "../../logs",
+        "log_frequency": 30,
+        "max_log_days": 30,
+        "max_log_size_per_file_MB": 10,
+        "rotate_daily": "1",
+        "log_format": ".json",
+        "disabled_sensors": "",
+        "compress_old_logs": "0",
+        "async_write": "1"
+    }
+]

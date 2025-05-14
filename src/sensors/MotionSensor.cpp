@@ -1,16 +1,14 @@
 #include "MotionSensor.h"
-#include <sstream>
+#include <string>
 #include <cstdlib>
 
 
-bool MotionSensor::simulateMotion() {
+bool MotionSensor::simulateMotion() const {
     return rand() % 10 == 0;  // 10% chance
 }
 
 nlohmann::json MotionSensor::generateData() const {
-    /*bool motion = simulateMotion();
-    std::stringstream ss;
-    ss << "{ \"sensor\": \"" << getID() << "\", \"type\": \"motion\", \"value\": " << (motion ? "true" : "false") << " }";
-    return ss.str();*/
-    return SensorNodeBase::generateData();
+    nlohmann::json data = SensorNodeBase::generateData();
+    data["simulate_motion"] = simulateMotion() ? std::string("true") : std::string("false");
+    return data;
 }

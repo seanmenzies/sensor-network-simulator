@@ -1,4 +1,5 @@
 #include "BrokerServer.h"
+#include "../consumers/ConsumerBase.h"
 #include "../common/NetworkUtils.h"
 #include <iostream>
 
@@ -34,7 +35,7 @@ void BrokerServer::doAccept() {
     });
 }
 
-void BrokerServer::registerConsumer(std::shared_ptr<IMessageConsumer> consumer) {
+void BrokerServer::registerConsumer(std::shared_ptr<ConsumerBase> consumer) {
     consumers.push_back(consumer);
 }
 

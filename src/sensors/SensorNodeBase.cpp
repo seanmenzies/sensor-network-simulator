@@ -1,5 +1,4 @@
 
-#include "../common/NetworkUtils.h"
 #include <chrono>
 #include <sstream>
 #include <iostream>
@@ -33,11 +32,8 @@ nlohmann::json SensorNodeBase::generateData() const
     json payload;
 
     payload["sensor_id"] = sensor_id;
-    payload["sensor_type"] = getSensorType();
+    payload["sensor_type"] = static_cast<int>(getSensorType());
     payload["timestamp"] = getCurrentTimestamp();
-
-    // include subclass-specific data
-    payload["data"] = json::parse(getSensorReadingJSON());
 
     return payload;
 }
@@ -70,7 +66,7 @@ void SensorNodeBase::sendToBroker()
     }
     nlohmann::json payload = generateData();
     // deserialise from JSON to a string then send payload to broker
-    boost::asio::write(socket, boost::asio::buffer(payload.dump()));
+    boost::asio::write(*_socket, boost::asio::buffer(payload.dump()));
 }
 
 SensorNodeBase::~SensorNodeBase()

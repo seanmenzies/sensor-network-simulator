@@ -1,0 +1,16 @@
+[
+    {
+      "sensor_id": "temp-lobby-1",
+      "sensor_type": 0,
+      "broker_host": 0,
+      "boker_port": 12345,
+      "sampling_interval": 5
+    },
+    {
+      "sensor_id": "motion-hall-2",
+      "sensor_type": 1,
+      "broker_host": 0,
+      "boker_port": 12345,
+      "sampling_interval": 2
+    }
+  ]

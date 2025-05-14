@@ -1,6 +1,9 @@
 #include "Configuration.h"
 #include <sstream>
 
+TemperatureUnit Configuration::temperatureUnit = TemperatureUnit::Celsius;
+short Configuration::decimalPlaces = 2;
+
 float Configuration::convertToTempUnit(float CelsiusTemp)
 {
     if (temperatureUnit != TemperatureUnit::Celsius)
@@ -12,8 +15,8 @@ float Configuration::convertToTempUnit(float CelsiusTemp)
 
 std::string Configuration::convertToTempUnit(std::string s_CelsiusTemp)
 {
-    if (getTemperatureUnit() == TemperatureUnit::Celsius) return s_CelsiusTemp;
-    float f_Temp = convertToTempUnit(std::stof(s_CelsiusTemp));
+    if (Configuration::getTemperatureUnit() == TemperatureUnit::Celsius) return s_CelsiusTemp;
+    float f_Temp = Configuration::convertToTempUnit(std::stof(s_CelsiusTemp));
     // use string stream to return stringified value to user-defined decimal places
     std::ostringstream ss;
     ss.precision(Configuration::getDecimalPlaces());
